@@ -15,7 +15,8 @@
             <input class="new-todo" placeholder="What needs to be done?" autofocus>
         </header>
         <section class="main">
-            <input class="toggle-all" type="checkbox">
+            <!-- The <label> "for" attribute must match the <input> "id" to target it -->
+            <input id="toggle-all" class="toggle-all" type="checkbox">
             <label for="toggle-all">Mark all as complete</label>
             <ul class="todo-list"></ul>
         </section>
