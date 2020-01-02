@@ -90,7 +90,7 @@
 
         // If an ID was actually given, find the item and update each property
         if (id) {
-            for (var i = 0; i < todos.length; i++) {
+            for (var i = 0, l = todos.length; i < l; i++) { // Optimized for loop
                 if (todos[i].id === id) {
                     for (var key in updateData) {
                         todos[i][key] = updateData[key];
@@ -122,17 +122,20 @@
     Store.prototype.remove = function(id, callback) {
         var data = JSON.parse(localStorage[this._dbName]);
         var todos = data.todos;
-        var todoId;
+        // var todoId; // This variable is not needed
 
-        for (var i = 0; i < todos.length; i++) {
+        /* This loop is not necessary, todo can be removed with only one for loop
+        for (var i = 0, l = todos.length; i < l; i++) { // Optimized for loop
             if (todos[i].id == id) {
                 todoId = todos[i].id;
             }
         }
+        */
 
-        for (var i = 0; i < todos.length; i++) {
-            if (todos[i].id == todoId) {
+        for (var i = 0, l = todos.length; i < l; i++) { // Optimized for loop
+            if (todos[i].id == id) {
                 todos.splice(i, 1);
+                break; // Break to exit the loop, or not use l variable
             }
         }
 

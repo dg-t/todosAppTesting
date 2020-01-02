@@ -59,7 +59,6 @@ describe('controller', function() {
     });
 
     it('should show entries on start-up', function() {
-        // TODO: write test
 
         // Define 'todo' and pass it as parameter in setUpModel
         var todo = { title: 'my todo' };
@@ -93,7 +92,6 @@ describe('controller', function() {
         });
 
         it('should show active entries', function() {
-            // TODO: write test
 
             // Define 'todo' and pass it as parameter in setUpModel
             var todo = { title: 'my todo', completed: false };
@@ -111,7 +109,6 @@ describe('controller', function() {
         });
 
         it('should show completed entries', function() {
-            // TODO: write test
 
             // Define 'todo' and pass it as parameter in setUpModel
             var todo = { title: 'my todo', completed: true };
@@ -172,7 +169,6 @@ describe('controller', function() {
     });
 
     it('should highlight "All" filter by default', function() {
-        // TODO: write test
 
         // Set view to default
         subject.setView('');
@@ -182,7 +178,6 @@ describe('controller', function() {
     });
 
     it('should highlight "Active" filter when switching to active view', function() {
-        // TODO: write test
 
         // Set view to 'Active'
         subject.setView('#/active');
@@ -193,7 +188,6 @@ describe('controller', function() {
 
     describe('toggle all', function() {
         it('should toggle all todos to completed', function() {
-            // TODO: write test
 
             // Define todo as 'not completed'
             var todo = { id: 42, title: 'my todo', completed: false };
@@ -210,7 +204,6 @@ describe('controller', function() {
         });
 
         it('should update the view', function() {
-            // TODO: write test
 
             // Define any todo as 'not completed'
             var todo = { id: 42, title: 'my todo', completed: false };
@@ -229,7 +222,6 @@ describe('controller', function() {
 
     describe('new todo', function() {
         it('should add a new todo to the model', function() {
-            // TODO: write test
 
             // Set model
             setUpModel([]);
@@ -283,7 +275,6 @@ describe('controller', function() {
 
     describe('element removal', function() {
         it('should remove an entry from the model', function() {
-            // TODO: write test
 
             // Define 'todo' and pass it as parameter in setUpModel 
             var todo = { id: 42, title: 'my todo', completed: false };
